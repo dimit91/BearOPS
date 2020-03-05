@@ -1,6 +1,5 @@
 import random
 import time
-import os
 
 
 def generate_sequence(difficulty):
@@ -10,8 +9,8 @@ def generate_sequence(difficulty):
         lst.append(str(rand_num))
         print(lst)
         time.sleep(0.7)
-
-    os.system('cls' if os.name == 'nt' else 'clear')
+    from Utils import screen_cleaner
+    screen_cleaner()
     return lst
 
 

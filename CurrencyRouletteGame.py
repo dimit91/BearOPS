@@ -15,7 +15,7 @@ def get_money_interval(difficulty):
 
 
 def get_guess_from_user():
-    prompt = int(input("What do thing is the Value in ILS ? "))
+    prompt = int(input("What do you think is the Value in ILS ? "))
     return prompt
 
 

@@ -1,6 +1,8 @@
 import GuessGame
 import MemoryGame
 import CurrencyRouletteGame
+import Utils
+import Score
 
 
 def welcome(name):
@@ -29,11 +31,11 @@ def load_game():
                 print("\nWrong choice please try again\n")
 
         if game == "1":
-            MemoryGame.play(int(difficulty))
+            MemoryGame.play(int(difficulty)), Score.add_score(difficulty)
         elif game == "2":
-            GuessGame.play(int(difficulty))
+            GuessGame.play(int(difficulty)), Score.add_score(difficulty)
         elif game == "3":
-            CurrencyRouletteGame.play(int(difficulty))
+            CurrencyRouletteGame.play(int(difficulty)), Score.add_score(difficulty)
         should_continue = get_should_continue()
 
 
